@@ -1,0 +1,256 @@
+.luxury-trains-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 20px;
+  max-width: 100%;
+  height: 100vh;
+}
+
+.content {
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 22px;
+  padding: 20px;
+  max-width: 190px;
+  height: 59vh; /* Changed to auto for better responsiveness */
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Added box-shadow for depth */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space between elements */
+}
+
+.content h1 {
+  font-size: 28px;
+  margin-top: -10px;
+  color: #333;
+}
+
+.content h2 {
+  font-size: 18px;
+  margin-top: -190px; /* Adjusted margin to avoid overlap */
+  color: #555;
+}
+
+.content p {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #666;
+  flex-grow: 1; /* Allows the paragraph to take up available space */
+}
+
+.learn-more-button {
+  background-color: #ff6b00;
+  color: white;
+  border: none;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 28px;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%; /* Make the button fit the content width */
+  box-sizing: border-box; /* Ensure padding doesn't affect button size */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+  align-self: center; /* Center the button horizontally */
+}
+
+.learn-more-button:hover {
+  background-color: #692f09;
+}
+
+
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-btn.active {
+  background-color: #fd6500;
+  color: white;
+}
+
+.nav-arrow {
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-arrow:hover {
+  color: #b94d00;
+}
+
+.navigation {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.nav-arrow {
+  color: white;
+  cursor: pointer;
+  font-size: 35px;
+  margin: 0 10px;
+}
+
+.nav-buttons {
+  display: flex;
+}
+
+.nav-btn {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 15px;
+  border: none;
+  margin: 0 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.nav-btn.active, .nav-btn:hover {
+  background-color: #ff6e07;
+  color: white;
+}
+
+/* Improved responsive styling for tablets and mobile devices */
+@media (max-width: 1040px) {
+  .luxury-trains-container {
+    flex-direction: column;
+    justify-content: center; /* Center content vertically on smaller screens */
+    align-items: center; /* Center content horizontally */
+    height: auto; /* Adjust height to fit content */
+    padding: 10px;
+  }
+
+  .content {
+    position: static; /* Remove absolute positioning */
+    margin: 20px 0; /* Add margin for spacing */
+    max-width: 75%; /* Reduce max-width to fit smaller screens */
+    height: 50vh; /* Adjust height based on content */
+    padding: 15px;
+  }
+
+  .content h1 {
+    font-size: 24px; /* Reduce font size for smaller screens */
+    margin-top: 0;
+  }
+
+  .content h2 {
+    font-size: 16px; /* Adjust font size */
+    margin-top: -150px;
+  }
+
+  .content p {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  .learn-more-button {
+    padding: 8px 15px; /* Adjust padding for smaller screens */
+    margin-top: -10px;
+    width: 25vh;
+  }
+
+  .image-container img {
+    height: auto; /* Adjust image height */
+    max-height: 60vh; /* Limit max-height of the image to fit content */
+  }
+
+  .navigation {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nav-arrow {
+    font-size: 25px;
+    margin: 0 5px;
+  }
+
+  .nav-buttons {
+    flex-wrap:wrap; /* Allow navigation buttons to wrap on smaller screens */
+    justify-content: center; /* Center navigation buttons */
+  }
+
+  .nav-btn {
+    padding: 8px 10px;
+    margin: 3px;
+  }
+}
+
+/* Additional adjustment for smaller screens if needed */
+@media (max-width: 768px) {
+  .luxury-trains-container {
+    padding: 5px;
+  }
+
+  .content {
+    padding: 10px;
+    max-width: 95%;
+  }
+
+  .content h1 {
+    font-size: 20px;
+  }
+
+  .content h2 {
+    font-size: 14px;
+  }
+
+  .learn-more-button {
+    padding: 6px 10px;
+  }
+
+  .nav-arrow {
+    font-size: 20px;
+  }
+
+  .nav-btn {
+    padding: 6px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    top: 10px;
+    left: 5px;
+    max-width: 100%;
+  }
+
+  .content h1 {
+    font-size: 18px;
+  }
+
+  .content h2 {
+    font-size: 12px;
+  }
+
+  .learn-more-button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .nav-arrow {
+    font-size: 20px;
+    margin: 0 3px;
+  }
+
+  .nav-btn {
+    padding: 6px 8px;
+    margin: 2px;
+  }
+}

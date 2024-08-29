@@ -1,0 +1,431 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --inputColor: rgb(239, 239, 239);
+  --textColor: hsl(240, 4%, 36%);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.home {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.overlay video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.homeContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--whiteColor);
+  width: 90%;
+  max-width: 1200px;
+  padding: 10rem;
+}
+.homeTitle{
+  font-size: 30px;
+  color:black;
+}
+.textDiv {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.homeTitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.cardDiv {
+  background-color: var(--whiteColor);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  max-width: 800px; /* Max width to keep it centered and neat */
+  flex-wrap: wrap; /* Make it responsive */
+}
+
+.dataInput {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+.dataInput label {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--textColor);
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  background-color: var(--inputColor);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.input input {
+  border: none;
+  background: none;
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.icon {
+  font-size: 1.2rem;
+  color: var(--PrimaryColor);
+}
+
+.priceInput {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+.label_total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--textColor);
+}
+
+.total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--textColor);
+}
+
+.searchOptions {
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--SecondaryColor);
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--whiteColor);
+  text-transform: uppercase;
+}
+
+.searchOptions .icon {
+  margin-right: 0.5rem;
+}
+
+.homeFooterIcons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  color: black;
+  justify-content: space-between;
+}
+
+/* Responsive Design */
+
+/* For devices with width <= 768px */
+@media (max-width: 768px) {
+  .homeContent {
+      padding: 5rem 2rem;
+  }
+
+  .homeTitle {
+      font-size: 2rem;
+  }
+
+  .cardDiv {
+      flex-direction: column;
+  }
+
+  .dataInput {
+      margin-bottom: 1rem;
+  }
+
+  .label_total {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .total {
+      margin-top: 0.5rem;
+  }
+}
+
+/* For devices with width <= 480px */
+@media (max-width: 480px) {
+  .homeContent {
+      padding: 3rem 1rem;
+  }
+
+  .homeTitle {
+      font-size: 1.5rem;
+  }
+
+  .textDiv {
+      font-size: 1rem;
+  }
+
+  .input {
+      padding: 0.3rem;
+  }
+
+  .icon {
+      font-size: 1rem;
+  }
+
+  .searchOptions {
+      padding: 0.3rem 1rem;
+      font-size: 0.9rem;
+  }
+}
+
+
+/* Main container styles */
+.main {
+  padding: 2rem;
+  background-color: #f5f5f5;
+  border-radius: 14px;
+  height: 1950px;
+}
+
+/* Section title styles */
+.secTitle .title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Section content container */
+.secContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Display 3 columns */
+  gap: 2rem; /* Space between grid items */
+}
+
+/* Subsection (individual destination) styles */
+.subsection {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.subsection:hover {
+  transform: translateY(-10px); /* Hover effect */
+}
+
+/* Image styles */
+.subsection img {
+  width: 100%;
+  height: 160px; /* Set a fixed height for images */
+  object-fit: cover; /* Ensure images cover the area */
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Title and location styles */
+.subsection h1 {
+  font-size: 1.5rem;
+  color: #0077b6;
+  margin-bottom: 0.5rem;
+}
+
+.subsection span {
+  display: block;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.subsection svg {
+  font-size: 1.5rem;
+  color: #0077b6;
+  margin-bottom: 0.5rem;
+}
+
+/* Context (price and culture) styles */
+.context {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.context1 h3 {
+  font-size: 1rem;
+  color: #333;
+}
+
+.txt span {
+  font-size: 1.25rem;
+  color: #0077b6;
+}
+
+/* Buttons */
+.btn1, .btn2 {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn1 {
+  margin-left: 0.5rem;
+  border-radius: 10px;
+}
+
+.btn2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+/* Responsive design for larger tablets and small desktops */
+@media (max-width: 1000px) {
+  /* Adjust padding and reduce height to avoid content overflow */
+  .main {
+    padding: 1.5rem;
+    height: auto; /* Allow dynamic resizing */
+  }
+
+  /* Switch to 2 columns */
+  .secContent {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for screens <= 1000px */
+    gap: 1.5rem; /* Reduce gap for better fitting */
+  }
+
+  /* Adjust subsection elements for smaller screens */
+  .subsection img {
+    height: 150px; /* Slightly reduce image height */
+  }
+
+  .subsection h1 {
+    font-size: 1.4rem; /* Adjust title size */
+  }
+
+  .subsection span {
+    font-size: 0.95rem; /* Slightly reduce location text size */
+  }
+
+  .subsection svg {
+    font-size: 1.4rem; /* Adjust icon size */
+  }
+
+  /* Adjust context and buttons */
+  .context1 h3 {
+    font-size: 0.95rem;
+  }
+
+  .txt span {
+    font-size: 1.15rem; /* Adjust price text size */
+  }
+
+  .btn1, .btn2 {
+    padding: 0.45rem 0.85rem; /* Adjust button padding */
+  }
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  /* Switch to single column layout */
+  .secContent {
+    grid-template-columns: 1fr; /* 1 column for screens <= 768px */
+    gap: 1.5rem; /* Maintain gap */
+  }
+
+  /* Further adjust subsection elements */
+  .subsection img {
+    height: 140px; /* Further reduce image height */
+  }
+
+  .subsection h1 {
+    font-size: 1.25rem;
+  }
+
+  .subsection span {
+    font-size: 0.9rem; /* Further reduce location text size */
+  }
+
+  .context1 h3 {
+    font-size: 0.9rem;
+  }
+
+  .txt span {
+    font-size: 1.1rem; /* Further adjust price text size */
+  }
+
+  .btn1, .btn2 {
+    padding: 0.4rem 0.8rem; /* Further adjust button padding */
+  }
+}
+
+/* Responsive design for small screens */
+@media (max-width: 480px) {
+  /* Maintain single column layout */
+  .secContent {
+    grid-template-columns: 1fr; /* Keep single column layout */
+    gap: 1.2rem; /* Slightly reduce gap */
+  }
+
+  /* Further reduce image and text sizes for smaller screens */
+  .subsection img {
+    height: 120px; /* Reduce image height for small screens */
+  }
+
+  .subsection h1 {
+    font-size: 1.15rem; /* Reduce title size */
+  }
+
+  .subsection span {
+    font-size: 0.85rem; /* Further reduce location text size */
+  }
+
+  .context1 h3 {
+    font-size: 0.85rem; /* Adjust context text size */
+  }
+
+  .txt span {
+    font-size: 1rem; /* Further adjust price text size */
+  }
+
+  .btn1, .btn2 {
+    padding: 0.35rem 0.7rem; /* Reduce button padding */
+    font-size: 0.9rem; /* Adjust button font size */
+  }
+}

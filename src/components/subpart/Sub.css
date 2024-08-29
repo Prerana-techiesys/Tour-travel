@@ -1,0 +1,267 @@
+/* Container for all destinations */
+.destinationss {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: none;
+}
+
+/* Title styling */
+.destinationss h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #333;
+}
+
+/* Grid container for destinations */
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px;
+  justify-content: space-between;
+  box-shadow: none;
+}
+
+/* Each destination container */
+.destination {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+/* Image container */
+.image {
+  position: relative;
+  box-shadow: none;
+}
+
+/* Image styling */
+.image img {
+  width: 80%;  /* Adjusted to fit container without extra width */
+  height: 300px;
+  border-radius: 20px;
+  box-shadow: none;
+}
+
+/* Overlay text on image */
+.overlayss {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  margin-top: 10px;
+  font-size: 1.8em;
+  margin-left: 300px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: none;
+}
+
+/* Country list container */
+.countries {
+  padding: 20px;
+}
+
+/* Country list styling */
+.countries ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #535353;
+  display: flex;
+  font-weight: bold;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Individual country styling */
+.countries ul li {
+  flex: 1 1 calc(33.333% - 10px); /* 3 items per row */
+  max-width: calc(33.333% - 10px);
+  margin-bottom: 10px;
+}
+
+/* Responsive styling */
+/* For tablets and smaller devices (landscape mode) */
+@media (max-width: 1024px) {
+  .destination-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  }
+
+  .image img {
+    width: 100%;  /* Make image full-width */
+  }
+
+  .overlayss {
+    font-size: 1.5em;  /* Adjust font size */
+    margin-left: 0;    /* Adjust text positioning */
+  }
+}
+
+/* For mobile devices (portrait mode) */
+@media (max-width: 768px) {
+  .destination-grid {
+    grid-template-columns: 1fr; /* 1 item per row */
+  }
+
+  .destinationss h1 {
+    font-size: 1.5em;  /* Adjust title font size */
+  }
+
+  .image img {
+    width: 100%;  /* Ensure image takes full width */
+  }
+
+  .overlayss {
+    font-size: 1em;  /* Further adjust font size */
+    margin-left: 0;    /* Position overlay text appropriately */
+  }
+
+  .countries ul {
+    padding: 0; /* Remove default padding */
+    margin: 0;  /* Remove default margin */
+    list-style-type: none; /* Remove default list style */
+  }
+
+  .countries ul li {
+    display: flex;  /* Make list items flex containers */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+    margin-bottom: 10px; /* Add spacing between list items */
+    padding: 14px; /* Add padding inside list items */
+  }
+}
+@media (max-width: 430px) {
+  .countries ul li {
+      flex: 1 1calc(50% - 10px); /* 2 items per row */
+      max-width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 300px) {
+  .countries ul li {
+      flex: 1 1 100%; /* 1 item per row */
+      max-width: 100%;
+  }
+}
+
+
+
+/* Next Part - Suppliers Section */
+
+.suppliers-container {
+  text-align: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin-top: -200px;
+}
+
+.suppliers-container h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.suppliers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.supplier-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+}
+
+.supplier-logo {
+  max-width: 100%;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.supplier-card h3 {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.supplier-card p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.see-all-button {
+  background-color: #7c3aed;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-top: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.see-all-button:hover {
+  background-color: #5a27c5;
+}
+
+/* Responsive Styling */
+
+
+@media (max-width: 768px) {
+  .suppliers-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .supplier-logo {
+      width: 80px;
+  }
+
+  .see-all-button {
+      width: 100%;
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 640px) {
+  .suppliers-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .supplier-card {
+      padding: 15px;
+  }
+
+  .supplier-logo {
+      width: 60px;
+  }
+
+  .see-all-button {
+      width: 100%; /* Change from 100% to auto */
+      padding: 15px;
+      border-radius: 15px;
+      margin-bottom: 50px;
+      margin-top:30px; /* Add margin to ensure spacing */
+  }
+
+  h2 {
+      font-size: 1.5em;
+      text-align: center;
+  }
+}
+
+/* Extra small screens (very narrow mobile devices) */
+@media (max-width: 480px) {
+  .see-all-button {
+      width: 100%; /* Full width for extra small screens */
+      padding: 15px;
+      margin-bottom: 80px;
+      border-radius: 15px;
+  }
+}

@@ -1,0 +1,327 @@
+.part {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.part h3 {
+    font-size: 28px;
+    text-align: center;
+    margin-top: 10px;
+    color: darkblue;
+}
+
+.part p {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+    color: black;
+}
+
+.iconic {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    flex-wrap: wrap; /* For responsiveness */
+    gap: 20px; /* Space between icons */
+}
+
+.ico {
+    text-align: center;
+    border-radius: 50%;
+    padding: 10px;
+    max-width: 150px;
+    flex: 1; /* Flex-grow for responsiveness */
+}
+
+.ico p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.ico svg {
+    font-size: 30px;
+    color: rgb(86, 86, 99); /* Icon color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .part h3 {
+        font-size: 24px;
+    }
+
+    .part p {
+        font-size: 16px;
+    }
+
+    .ico svg {
+        font-size: 35px;
+    }
+
+    .ico p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .part h3 {
+        font-size: 22px;
+    }
+
+    .part p {
+        font-size: 14px;
+    }
+
+    .ico svg {
+        font-size: 30px;
+    }
+
+    .ico p {
+        font-size: 12px;
+    }
+}
+
+
+/* slider */
+
+.carousel-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .carousel-slide {
+    position: relative;
+    padding: 10px;
+  }
+  
+  .carousel-image {
+    width: 80%;
+    height: auto;
+    border-radius: 12px;
+    opacity: 0.8;
+  }
+  
+  .carousel-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    border-radius: 14px;
+    padding: 5px 10px;
+  }
+  
+  .location-icon {
+    font-size: 30px;
+    color: #b9b3be;
+    margin-right: 5px;
+    margin-bottom: 200px;
+  }
+  
+  h2 {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 200px;
+  }
+  
+  /* Dots customization */
+  .slick-dots li button:before {
+    font-size: 12px;
+    color: #af65fa;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #af65fa;
+  }
+
+  /* FAQ*/
+
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .faq-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    color:black;
+  }
+  
+  .faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+  }
+  
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 23px;
+    font-weight: bold;
+    color:black;
+  }
+  
+  .faq-answer {
+    margin-top: 10px;
+    padding-left: 20px;
+    font-size: 17px;
+    color: #333;
+  }
+  
+  .faq-icon {
+    font-size: 1rem;
+    color: blue;
+  }
+  
+  @media (max-width: 600px) {
+    .faq-container {
+      padding: 10px;
+    }
+  
+    .faq-container h2 {
+      font-size: 1.5rem;
+    }
+  
+    .faq-question {
+      font-size: 1rem;
+    }
+  
+    .faq-answer {
+      font-size: 0.9rem;
+    }
+  }
+
+
+  /* pack */
+
+
+
+.pricing-table {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    margin-top: 50px;
+
+}
+
+.pricing-card {
+    background: #222;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-top: 6px solid;
+    border-radius: 20px;
+
+}
+
+.pricing-card .header {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.pricing-card h3 {
+    font-size: 1.2em;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pricing-card h2 {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+.pricing-card p {
+    font-size: 1em;
+    margin: 5px 0;
+    font-style: italic;
+}
+
+.pricing-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.pricing-card ul li {
+    margin: 15px 0;
+    font-size: 0.9em;
+    padding: 5px 0;
+    border-bottom: 3px solid #333;
+    display: flex;
+    color: whitesmoke;
+    justify-content: space-between;
+}
+
+.pricing-card ul li:after {
+    content: '✔';
+    color: #fff;
+}
+
+.pricing-card button {
+    background-color: #f90;
+    color: #111;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.6em;
+    text-transform: uppercase;
+}
+
+.pricing-card.silver {
+    border-color: silver;
+    box-shadow: 0 0 15px silver;
+}
+
+.pricing-card.gold {
+    border-color: gold;
+    box-shadow: 0 0 15px gold;
+}
+
+.pricing-card.bronze {
+    border-color: #cd7f32;
+    box-shadow: 0 0 15px #cd7f32;
+}
+
+.pricing-card.silver .header {
+    background: linear-gradient(to bottom, #e0e0e0, #b0b0b0);
+}
+
+.pricing-card.gold .header {
+    background: linear-gradient(to bottom, #ffd700, #ffb700);
+}
+
+.pricing-card.bronze .header {
+    background: linear-gradient(to bottom, #cd7f32, #b87333);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pricing-card {
+        max-width: 100%;
+    }
+
+    .pricing-table {
+        flex-direction: column;
+        align-items: center;
+    }
+}
